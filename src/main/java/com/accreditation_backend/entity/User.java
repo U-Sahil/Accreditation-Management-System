@@ -18,6 +18,19 @@ public class User {
 
     private String role;
 
+    /// //// department
+    @ManyToOne
+    @JoinColumn(name="department_id")
+    private Department department;
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
     public Long getId() {
         return id;
     }
